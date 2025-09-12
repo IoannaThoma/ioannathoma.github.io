@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ioanna Thoma — Personal Page</title>
+  <style>
+    :root{--left-width:280px;--gap:28px;--bg:#fff}
+    *{box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial;margin:0;background:var(--bg);color:#111}
+    .container{max-width:980px;margin:36px auto;padding:24px;display:flex;gap:var(--gap)}
+    .left{width:var(--left-width);flex:0 0 var(--left-width);border-right:1px solid #eee;padding-right:18px}
+    .photo{width:100%;border-radius:8px;display:block;object-fit:cover;background:#ddd;height:280px}
+    .details{margin-top:12px}
+    .name{font-weight:700;font-size:1.15rem;margin-bottom:4px}
+    .role{color:#555;font-size:0.95rem;margin-bottom:8px}
+    .contact{font-size:0.92rem;color:#333}
+    .right{flex:1;padding-left:18px}
+    .section{margin-bottom:20px}
+    .section h2{font-size:1.05rem;margin:0 0 8px 0}
+    .footer{margin-top:28px;color:#666;font-size:0.85rem;border-top:1px solid #f5f5f5;padding-top:12px}
+    @media (max-width:740px){.container{flex-direction:column}.left{width:100%;border-right:0;padding-right:0}.right{padding-left:0}}
+  </style>
+</head>
+<body>
+  <main class="container" role="main">
+    <aside class="left" aria-label="Profile">
+      <img src="https://via.placeholder.com/400x400.png?text=Photo" alt="Profile photo" class="photo" />
+      <div class="details">
+        <div class="name">Ioanna Thoma</div>
+        <div class="role">Research Fellow in EHR modelling at LSHTM </div>
+        <div class="contact">
+          <div>Email: i dot thoma at lshtm dot ac dot uk </div>
+            <div> <a href="https://www.linkedin.com/in/ioanna-thoma-aa1952118/">LinkedIn</a>, <a href="https://scholar.google.com/citations?hl=en&user=q2HUVtkAAAAJ">Google Scholar</a>, <a href="https://github.com/IoannaThoma/">GitHub</a> </div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="right" aria-label="Main content">
+      <article class="section" id="about">
+        <h2>Short Bio</h2>
+        <p> My name is Ioanna Thoma, and I am a postdoctoral researcher in Biomedical Data Science, based in London, in the United Kingdom. My research focus is on understanding differential model performance and accuracy across diverse patient groups, to identify those at highest risk of late diagnosis, misdiagnosis, hospitalisation, and mortality. The broader goal of my work is to advance data-driven approaches to healthcare that better represent diverse populations and promote fairness and equity in predictive modelling. </p>
+      </article>
+
+      <article class="section" id="work">
+        <h2>Work</h2>
+        <p>I currently work as a Research Fellow at the London School of Hygiene and Tropical Medicine (LSHTM), in the department of Infectious Disease Epidemiology and Dynamics (IDED) within the Centre for Mathematical Modelling of Infectious Diseases (CMMID). Collaborating closely with <a href="https://www.lshtm.ac.uk/aboutus/people/eggo.rosalind">Prof Rosalind Eggo</a>, I'm investigating post-infection outcomes (COVID-19, influenza, RSV) and healthcare inequalities in England, leveraging electronic health data from OpenSAFELY to drive methodological advancements and target interventions for at-risk populations. </p>
+</p> Before this role, I was a Research Associate at the Alan Turing Institute, contributing to the Turing-Roche Partnership alongside <a href="https://profiles.ucl.ac.uk/87500-brieuc-lehmann"> Dr Brieuc Lehmann</a> (UCL Stats) and Dr Matthew Sperrin (University of Manchester).  </p>
+
+ </p> I received my PhD from the University of Edinburgh. Joining <a href="https://institute-genetics-cancer.ed.ac.uk/research/research-groups-a-z/colhoun-group">  Prof Helen Colhoun's group</a> and alongside Dr Athina Spiliopoulou and Prof Paul McKeigue, I studied and developed joint modelling techniques for longitudinal and time-to-event data, specifically aimed at risk prediction for individuals with type 1 diabetes. Since then, I have engaged with research activities encompassing scalable joint modelling approaches for dynamic risk prediction (UoE, LSHTM), fairness evaluations of statistical and machine learning models (UoE), and extending risk prediction methods through data augmentation techniques based on causal inference principles (UCL). </p>
+
+ </p> During the later days of my PhD, I transitioned to a role as a Postdoctoral Research Associate in Health Data Science at the University of Edinburgh, collaborating with Prof Catalina Vallejos and Dr James Liley. During this time, we conducted an evaluation of SPARRA - a prediction tool which is utilised by Scottish general practitioners to forecast the likelihood of emergency hospital admissions for their patients in the upcoming year. While the SPARRA score demonstrates good performance across the general population, our research emphasised the critical need to assess its effectiveness within specific population subgroups, such as individuals over 65, those residing in highly deprived areas, and residents of the Scottish Islands. This nuanced approach aimed to enhance the tool's applicability and ensure equitable healthcare access for all demographics. Paper <a href="https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000675"> here</a>. </p>
+
+ </p> Tracing all the way back, I began my academic journey with a BSc in Statistics from the University of Piraeus, in Greece, where I laid a strong analytical foundation that sparked my interests in data sciences. Building on this foundation, I pursued an MSc in Data Science at Lancaster University, where I refined my skills in advanced statistical methods and machine learning. This educational trajectory equipped me with the necessary skills to embark on a career dedicated to innovative research in epidemiology and health data analysis. </p>
+      </article>
+
+      <article class="section" id="contact">
+        <h2>Featured Project</h2>
+        <p> One of the projects I am most proud of, following my PhD, involved the development of a sequential, fairness-aware framework that builds upon a baseline clinical model, specifically the Framingham Risk Score for CVD risk, using UK Biobank data. This approach identifies uncertain cases for targeted additional testing and integrates a polygenic risk score to enhance risk prediction accuracy. By designing a stratified, threshold-based policy, we examined varying tolerance levels based on protected characteristics to select patients at intermediate risk, thereby promoting more equitable allocation of interventions. </p>
+</p> Our evaluations demonstrated significant improvements in discrimination, calibration, and clinical utility among selected individuals, although we noted some demographic variations in sensitivity (lower for females aged 40–49 and higher for males). In the coming year, Brieuc and I plan to implement a configurable pipeline and investigate stochastic uncertainty-based subsampling. Paper <a href="https://proceedings.mlr.press/v294/thoma25a.html"> here</a>. </p>
+      </article>
+
+      <div class="footer">
+        <div>Made by myself - hosted on GitHub Pages</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+
